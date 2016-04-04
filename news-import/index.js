@@ -1,11 +1,23 @@
+var newsImporter = require('../lib/newsimporter');
+
 module.exports = function (context, myTimer) {
 
-    var timeStamp = new Date().toISOString();
+    newsImporter.getLowerBoundDate(function (err, date) {
+        if (err) {
+            context.log("ERROR in getLowerBound: " + JSON.stringify(err));
+            context.done(err);
+        }
 
-    context.bindings.document = {
-        timestamp: timeStamp,
-        text: "foobar"
-    };
-
-    context.done();
+        newsImporter.getMostRecentNews(date, function (data) {
+            newsImporter.updateNewsDB(data, function (err, data) {
+                if (err) {
+                    context.log("ERROR in updateNewsDB: " + JSON.stringify(err));
+                    context.done(err);
+                }
+                
+                context.log("Update successful!");
+                context.done();
+            });
+        });
+    });
 };
