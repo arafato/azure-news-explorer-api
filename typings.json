@@ -1,5 +1,6 @@
 {
   "ambientDependencies": {
+    "async": "registry:dt/async#1.4.2+20160316155526",
     "chai": "registry:dt/chai#3.4.0+20160317120654",
     "documentdb": "registry:dt/documentdb#0.0.0+20160316155526",
     "mocha": "registry:dt/mocha#2.2.5+20160317120654",

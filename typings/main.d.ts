@@ -1,3 +1,4 @@
+/// <reference path="main/ambient/async/index.d.ts" />
 /// <reference path="main/ambient/chai/index.d.ts" />
 /// <reference path="main/ambient/documentdb/index.d.ts" />
 /// <reference path="main/ambient/mocha/index.d.ts" />
