@@ -1,3 +1,4 @@
+var webscraper = require('../lib/webscraper');
 var newsImporter = require('../lib/newsimporter-documentdb');
 
 module.exports = function (context, myTimer) {
@@ -8,7 +9,7 @@ module.exports = function (context, myTimer) {
             context.done(err);
         }
 
-        newsImporter.getMostRecentNews(date, function (data) {
+        webscraper.getMostRecentNews(date, function (data) {
             newsImporter.updateNewsDB(data, function (err, data) {
                 if (err) {
                     context.log("ERROR in updateNewsDB: " + JSON.stringify(err));
