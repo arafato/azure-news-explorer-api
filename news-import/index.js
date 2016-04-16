@@ -1,4 +1,4 @@
-var newsImporter = require('../lib/newsimporter');
+var newsImporter = require('../lib/newsimporter-documentdb');
 
 module.exports = function (context, myTimer) {
 
