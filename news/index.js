@@ -15,7 +15,7 @@ module.exports = function (context, req) {
         context.done();
     }
 
-    var q = new Buffer("req.q", 'base64').toString('utf8');
+    var q = new Buffer(req.q, 'base64').toString('utf8');
     context.log("QUERY: " + q);
     news.query(q, function (err, data) {
         if (err) {
