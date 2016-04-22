@@ -1,5 +1,4 @@
 /* global Buffer */
-var request = require('request');
 var config = require('../lib/config');
 var news = require('../lib/newsquery');
 
