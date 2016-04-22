@@ -5,15 +5,6 @@
       "name": "myTimer",
       "type": "timerTrigger",
       "direction": "in"
-    },
-    {
-      "databaseName": "AzureNews",
-      "collectionName": "News",
-      "createIfNotExists": true,
-      "connection": "arafato_DOCUMENTDB",
-      "name": "document",
-      "type": "documentdb",
-      "direction": "out"
     }
   ],
   "disabled": false
