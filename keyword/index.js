@@ -11,4 +11,6 @@ module.exports = function (context, req) {
         status: 200,
         body: req.query.keyword
     };
+    
+    context.done();
 };
