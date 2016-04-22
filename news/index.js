@@ -1,8 +1,8 @@
 module.exports = function (context, req) {
-    if (!req.query.keyword) {
+    if (!req.query.q) {
         context.res = {
             status: 400,
-            body: "Please pass a keyword as a parameter!"
+            body: "Missing query parameter 'q'"
         };
         context.done();
     }
