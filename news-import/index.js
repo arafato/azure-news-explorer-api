@@ -1,5 +1,5 @@
 var webscraper = require('../lib/webscraper');
-var newsImporter = require('../lib/newsimporter-documentdb');
+var newsImporter = require('../lib/newsimporter-search');
 
 module.exports = function (context, myTimer) {
 
