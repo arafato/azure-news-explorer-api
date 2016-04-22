@@ -7,6 +7,7 @@ module.exports = function (context, myTimer) {
         if (err) {
             context.log("ERROR in getLowerBound: " + JSON.stringify(err));
             context.done(err);
+            return;
         }
         context.log("Got lower bound date: " + date);
         webscraper.getMostRecentNews(date, function (data) {
@@ -15,6 +16,7 @@ module.exports = function (context, myTimer) {
                 if (err) {
                     context.log("ERROR in updateNewsDB: " + JSON.stringify(err));
                     context.done(err);
+                    return;
                 }
                 
                 context.log("Update successful!");
