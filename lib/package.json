@@ -10,8 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "async": "^2.0.0-rc.2",
+    "azure-search": "0.0.7",
     "chai": "^3.5.0",
-    "documentdb": "^1.6.0",
     "mocha": "^2.4.5",
     "request": "^2.72.0",
     "sprintf-js": "^1.0.3"
