@@ -40,7 +40,7 @@ module.exports = function (context, req) {
     }
 
     if (req.query.keyword) {
-        news.keywordQuery(req.query.keyword, req.query.ordermode, req.query.startdate, req.query.enddate, function (err, data) {
+        news.keywordQuery(req.query.keyword, req.query.ordermode, req.query.startdate, req.query.enddate, req.query.skip, function (err, data) {
             handleResult(context, err, data);
         })
     }
