@@ -1,0 +1,40 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Azure News Explorer",
+        "description": "Let's you search through the entire Azure news history, updated daily."
+    },
+    "schemes": [
+        "https"
+    ],
+    "host": "azurenewsexplorer-backend.azurewebsites.net",
+    "basePath": "/api",
+    "paths": {
+        "/news": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "GET Azure News"
+                    }
+                },
+				"parameters": [
+					{
+						"name": "keyword",
+						"in": "query", 
+						"description": "keyword to search for",
+						"type": "string",
+						"required": true
+					},
+					{
+						"name": "code",
+						"in": "query", 
+						"description": "authentication token",
+						"type": "string",
+						"required": true
+					}
+				]
+            }
+        }
+    }
+}
